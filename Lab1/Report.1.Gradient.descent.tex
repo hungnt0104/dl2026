@@ -19,15 +19,15 @@ Then, I define the gradient descent function, with x = x - lr * f'(x).
 I ran with the learning rate from 0.1 to 0.9, with step 0.1. x = 10, run for 10 iterations. 
 
 \begin{itemize}
-    \item lr = 0.1: $f(x)$ decreases smoothly to $\approx 1.15$. Convergence is stable but slow.
-    \item lr = 0.2: $f(x)$ reaches $\approx 0.003$. Good convergence speed.
-    \item lr = 0.3: $f(x)$ reaches $\approx 1.10 \times 10^{-6}$. Very fast convergence.
-    \item lr = 0.4: $f(x)$ reaches $\approx 1.05 \times 10^{-12}$. Extremely fast convergence.
-    \item lr = 0.5: $f(x) = 0$ after the first step.
-    \item lr = 0.6: $f(x) \approx 1.05 \times 10^{-12}$. Fast convergence, but $x$ starts oscillating (zig-zagging) between positive and negative values.
-    \item lr = 0.7: $f(x) \approx 1.10 \times 10^{-6}$. Significant oscillation around the minimum.
-    \item lr = 0.8: $f(x) \approx 0.003$. Heavy oscillation.
-    \item lr = 0.9: $f(x) \approx 1.15$. Very high oscillation.
+    \item lr = 0.1: $f(x)$ decreases smoothly. It requires many steps to reach $f(x) \approx 0.013$ as it approaches the minimum from one side.
+    \item lr = 0.2: Faster convergence, reaching $f(x) \approx 0.0036$ before stopping.
+    \item lr = 0.3: Reaches $f(x) \approx 1.09 \times 10^{-6}$ very quickly.
+    \item lr = 0.4: Stops almost immediately at $f(x) \approx 1.05 \times 10^{-12}$.
+    \item lr = 0.5: Perfect convergence. Reaches $f(x) = 0$ in exactly one step.
+    \item lr = 0.6: Reaches $f(x) \approx 1.05 \times 10^{-12}$ quickly, but $x$ alternates signs (zigzagging).
+    \item lr = 0.7: Reaches $f(x) \approx 4.09 \times 10^{-5}$ with noticeable oscillation.
+    \item lr = 0.8: $f(x)$ oscillates heavily, stopping at $f(x) \approx 0.0036$ after jumping across the minimum multiple times.
+    \item lr = 0.9: Slowest "oscillating" convergence. 
 \end{itemize}
 
 \end{document}
