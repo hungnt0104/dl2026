@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Lab1 Deep Learning: Gradient Descent}
+\author{Nguyen Thanh Hung}
+\date{May 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{How you implement the algorithm?}
+
+First, I define the $f(x) = x^2$ and $f'(x) = 2x$. 
+Then, I define the gradient descent function, with x = x - lr * f'(x). 
+
+\section{Analyze the effect of different learning rate r}
+
+I ran with the learning rate from 0.1 to 0.9, with step 0.1. x = 10, run for 10 iterations. 
+
+\begin{itemize}
+    \item lr = 0.1: $f(x)$ decreases smoothly to $\approx 1.15$. Convergence is stable but slow.
+    \item lr = 0.2: $f(x)$ reaches $\approx 0.003$. Good convergence speed.
+    \item lr = 0.3: $f(x)$ reaches $\approx 1.10 \times 10^{-6}$. Very fast convergence.
+    \item lr = 0.4: $f(x)$ reaches $\approx 1.05 \times 10^{-12}$. Extremely fast convergence.
+    \item lr = 0.5: $f(x) = 0$ after the first step.
+    \item lr = 0.6: $f(x) \approx 1.05 \times 10^{-12}$. Fast convergence, but $x$ starts oscillating (zig-zagging) between positive and negative values.
+    \item lr = 0.7: $f(x) \approx 1.10 \times 10^{-6}$. Significant oscillation around the minimum.
+    \item lr = 0.8: $f(x) \approx 0.003$. Heavy oscillation.
+    \item lr = 0.9: $f(x) \approx 1.15$. Very high oscillation.
+\end{itemize}
+
+\end{document}
